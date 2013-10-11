@@ -1,10 +1,12 @@
-同步twitter到新浪微博
+同步twitter到新浪微博&人人网
 ====================
 
-部署在Google Appengine上，自动同步twitter到新浪微博，自动转换短链接以防止被屏蔽。
+Twitter-to-weibo by [yfli](https://github.com/yfli/twitter-to-weibo-appengine)
 
-从0.29版本开始使用Sina微博的gtalk bot同步，只能同步消息，无法同步图片。因Sina的oauth2分级政策
-意味着小应用根本无法使用oauth2。事实上大应用基本都是用它的Xauth方法。
+添加了Renren API 2.0 python SDK by [rellik6](https://github.com/rellik6/renrenpy/)
+以及同步人人网状态的功能 
+
+部署在Google Appengine上，自动同步twitter到新浪微博，自动转换短链接以防止被屏蔽。
 
 
 安装
@@ -45,7 +47,7 @@
 示例
 ---
 
-这是我建的一个Lady Gaga的同步。Lady Gaga [twitter](https://twitter.com/ladygaga), 
+这是[yfli]建的一个Lady Gaga的同步。Lady Gaga [twitter](https://twitter.com/ladygaga), 
 Lady Gaga [微博](http://weibo.com/u/2841791740)
 
 License
@@ -65,6 +67,8 @@ License
 
 * [yfli](https://twitter.com/yfli)@twitter
 * [warehou](http://www.weibo.com/u/1410749162)@微博
+
+* [mrseaman](https://twitter.com/_mrseaman)@twitter
 
 Changelog
 ---------
