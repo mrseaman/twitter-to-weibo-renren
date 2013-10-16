@@ -298,10 +298,10 @@ def sync_twitter(account):
         #publish to weibo
         try:
             if pic_data :
-                wbclient.statuses.upload.post(status=text, pic=StringIO(pic_data))
-                #rr_photo = open(StringIO(pic_data), 'rb')
-                #rrclient.photo.upload(albumId=932891731, description=text, rr_photo)
-                #rr_photo.close()
+                wbclient.statuses.upload.post(status=text, pic = cStringIO.StringIO(pic_data))
+                img = StringIO.StringIO(pic_data)
+                img.name = 'temp.jpg'
+                rrclient.photo.upload(albumId = 932891731, description = text, file = img)
             else:
                 wbclient.statuses.update.post(status=text)
                 rrclient.status.put(content=text)
