@@ -1,0 +1,22 @@
+application: twitter--weibo
+version: 3
+runtime: python27
+api_version: 1
+threadsafe: false
+
+libraries:
+- name: webapp2
+  version: "latest"
+
+handlers:
+- url: /twitter(.*)
+  script: twitter.py
+
+- url: /binding.html
+  static_files: static/binding.html
+  upload: static/binding.html
+
+- url: .*
+  script : app.app
+
+
