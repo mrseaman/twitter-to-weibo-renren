@@ -1,18 +1,41 @@
+<<<<<<< HEAD
 同步twitter到新浪微博及人人网
 ====================
 
 部署在Google Appengine上，自动同步twitter到新浪微博及人人网，自动转换短链接以防止被屏蔽。
 
 因Sina的oauth2分级政策意味着小应用根本无法使用oauth2。事实上大应用基本都是用它的Xauth方法。
+=======
+同步twitter到新浪微博&人人网
+====================
+
+Twitter-to-weibo by [yfli](https://github.com/yfli/twitter-to-weibo-appengine)
+
+添加了Renren API 2.0 python SDK by [rellik6](https://github.com/rellik6/renrenpy/)
+以及同步人人网状态的功能 
+
+部署在Google Appengine上，自动同步twitter到新浪微博，自动转换短链接以防止被屏蔽。
+>>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 
 
 安装
 ---
 
+<<<<<<< HEAD
 首先下载本项目代码。使用git或直接下载[zip包](https://github.com/mrseaman/twitter-to-weibo-renren/zipball/master)
 
 安装需要以下几步。
 
+=======
+首先下载本项目代码。使用git或直接下载[zip包](https://github.com/yfli/twitter-to-weibo-appengine/zipball/master)
+
+安装需要以下几步。
+
+* 申请一个[tiny.cc](http://tiny.cc)的帐号。从api页面 http://tiny.cc/api-docs 取得你的API Key
+* 到微博聊天机器人绑定页面http://app.weibo.com/tool/imbot ，绑定gtalk聊天机器人。绑定帐号为[yourappid]@appspot.com。
+注意[yourappid]为你将要使用的app engine id。新浪会告诉你聊天机器人的帐号（一般为sinat064@gmail.com的形式）和验证码。
+
+>>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 * 编辑myid.py文件，把用户名、密码、验证码和申请到的App keys填入。
 
 ```console
@@ -40,7 +63,11 @@
 示例
 ---
 
+<<<<<<< HEAD
 这是[yfli](https://twitter.com/yfli)创建的一个Lady Gaga的同步。Lady Gaga [twitter](https://twitter.com/ladygaga), 
+=======
+这是[yfli]建的一个Lady Gaga的同步。Lady Gaga [twitter](https://twitter.com/ladygaga), 
+>>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 Lady Gaga [微博](http://weibo.com/u/2841791740)
 
 License
@@ -58,14 +85,26 @@ License
 联系
 ----
 
+<<<<<<< HEAD
+=======
+* [yfli](https://twitter.com/yfli)@twitter
+* [warehou](http://www.weibo.com/u/1410749162)@微博
+
+>>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 * [mrseaman](https://twitter.com/_mrseaman)@twitter
 
 Changelog
 ---------
 
+<<<<<<< HEAD
 - ver 0.3 2013/12/31
     
     Add Support Renren sync 
+=======
+- ver 0.29 2012/7/31
+
+     Enmergency update. Sina blocked Basic Auth since 7/24. Use gtalk robot instead.
+>>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 
 - ver 0.2 2012/7/17
 
