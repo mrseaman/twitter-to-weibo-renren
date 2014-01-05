@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 application: twitter--weibo
 version: 3
 =======
 application: app-id
 version: 1
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 runtime: python27
 api_version: 1
 threadsafe: false

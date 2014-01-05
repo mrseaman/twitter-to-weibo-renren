@@ -1,4 +1,4 @@
-同步twitter到新浪微博及人人网
+同步 Twitter 到新浪微博及人人网
 ====================
 
 部署在Google Appengine上，自动同步twitter到新浪微博及人人网，自动转换短链接以防止被屏蔽。
@@ -33,7 +33,7 @@ Twitter-to-weibo by [yfli](https://github.com/yfli/twitter-to-weibo-appengine)
      my_tinycc_apikey=""
 ```
 * 上传代码到你的appengine(见部署）
-
+* 部署后打开 yourappid.appspot.com 进行设置，加入账户认证信息
 部署
 ---
 

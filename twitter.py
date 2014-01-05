@@ -2,11 +2,8 @@
 # -*- coding: utf-8 -*-
 
 #to ensure the utf8 encoding environment
-<<<<<<< HEAD
 from __future__ import with_statement
 
-=======
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 import sys
 default_encoding = 'utf-8'
 if sys.getdefaultencoding() != default_encoding:
@@ -21,7 +18,6 @@ import htmlentitydefs
 import urllib,Cookie
 import json
 import urllib2
-<<<<<<< HEAD
 import mimetypes
 
 from google.appengine.api import urlfetch
@@ -31,17 +27,11 @@ from google.appengine.ext import db
 
 import cStringIO
 import StringIO
-=======
-
-from google.appengine.api import urlfetch
-from google.appengine.ext import db
-from google.appengine.api import xmpp
 
 try:
     from cStringIO import StringIO
 except ImportError:
     from StringIO import StringIO
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 
 import tweepy
 from tweepy.error import TweepError
