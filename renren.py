@@ -198,12 +198,7 @@ class APIWrapper:
 
         return request
 
-
-<<<<<<< HEAD
-class APIWrapperV2:
-=======
 class APIWrapperV2():
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
     """Wrapper class for API 2.0."""
     #API Server URI
     API_SERVER = "https://api.renren.com/v2"

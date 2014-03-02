@@ -254,7 +254,6 @@ def get_image_data(url):
     else:
         return None
 
-<<<<<<< HEAD
 def save_image(url):
     '''
     Save image to open it file like
@@ -268,8 +267,6 @@ def save_image(url):
     files.finalize(file_name)                       
     blob_key = files.blobstore.get_blob_key(file_name)     
     return blob_key
-=======
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
 
 WB_CONSUMER_KEY="211160679"
 WB_CONSUMER_SECRET="63b64d531b98c2dbff2443816f274dd3"
@@ -310,14 +307,11 @@ def sync_twitter(account):
 
         if text[0] == '@' : #do not sync iff @, sync RT@
             continue
-<<<<<<< HEAD
-	elif text[0] == '\' : #do not sync to weibo, sync to renren only
-	    synclabel = 'renren'
-	elif text[0] == '/' : #do not sync to renren, sync to weibo only
-	    synclabel = 'weibo'
-=======
+        elif text[0] == '\\' : #do not sync to weibo, sync to renren only
+	       synclabel = 'renren'
+        elif text[0] == '/' : #do not sync to renren, sync to weibo only
+	       synclabel = 'weibo'
 
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
         #print "<li>",twid,text,"</li><br />\n"
         logging.debug("msg id=%s,msg:%s "%(twid, text))
 
@@ -325,30 +319,19 @@ def sync_twitter(account):
         if img_url != None:
             pic_data = get_image_data(img_url) 
         
-<<<<<<< HEAD
+
         #publish to weibo & renren
         try:
             if pic_data :
-                img = StringIO.StringIO(pic_data)
-                img.name = 'temp.jpg'
-                wbclient.statuses.upload.post(status=text, pic = cStringIO.StringIO(pic_data))
-=======
-        #publish to weibo
-        try:
-            if pic_data :
-                wbclient.statuses.upload.post(status=text, pic = cStringIO.StringIO(pic_data))
-                img = StringIO.StringIO(pic_data)
-                img.name = 'temp.jpg'
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
-                rrclient.photo.upload(albumId = 932891731, description = text, file = img)
+				img = StringIO.StringIO(pic_data)
+				img.name = 'temp.jpg'
+				wbclient.statuses.upload.post(status=text, pic = cStringIO.StringIO(pic_data))
+				rrclient.photo.upload(albumId = 932891731, description = text, file = img)
             else:
                 wbclient.statuses.update.post(status=text)
                 rrclient.status.put(content=text)
-<<<<<<< HEAD
         except renren.APIError, e:
             logging.error("Error update to renren: %s", e.error)
-=======
->>>>>>> 46ecc5f0e1d622544b55c2423d194f0cebd69ef9
         except APIError, e:
             logging.error("Err update to sina: %s ",e.error )
             if e.error_code == 10023 or e.error_code == 20016:
